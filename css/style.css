@@ -179,17 +179,17 @@ header a {
     border-top: 20px dotted #B8312F;
 }
 
-#randomize .row > div.col-xs-4 {
-    padding-left: 35px;
+#randomize .row > div.col-pic {
+    /*padding-left: 35px;*/
 }
 
-#randomize .row > div.col-xs-4 > div {
+#randomize .row > div.col-pic > div {
     padding-top: 40px;
-    padding-left: 40px;
+    padding-left: 35px;
     width: 175px;
     height: 175px;
     background-color: #fff;
-    border-radius: 50%;
+    border-radius: 80%;
     margin: auto;
 }
 
