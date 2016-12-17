@@ -159,8 +159,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 this._$fakeFirstTile = this.$tiles.last().clone();
                 this._$fakeLastTile = this.$tiles.first().clone();
 
-                this.$container.prepend(this._$fakeFirstTile);
-                this.$container.append(this._$fakeLastTile);
+                //this.$container.prepend(this._$fakeFirstTile);
+                //this.$container.append(this._$fakeLastTile);
             }
         }, {
             key: '_initDirection',
