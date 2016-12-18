@@ -14,35 +14,34 @@
 </head>
 
 <body>
-    <div id="watch" style="padding-top:50px;">
-        <div class="content">
+    <div id="watch" style="padding-top:20px;">
+        <div class="content container">
             <h1>Select the Candidate</h1>
-            <ul>
+            <ul id="theList">
                 <li>
+                    <input type="checkbox" id="cb0" checked="checked" />
+                    <label for="cb0"><img src="img/user0.jpg" /></label>
+                </li>
+                <!-- <li>
                     <input type="checkbox" id="cb1" checked="checked" />
-                    <label for="cb1"><img src="img/user0.jpg" /></label>
+                    <label for="cb1"><img src="img/user1.jpg" /></label>
                 </li>
                 <li>
-                    <input type="checkbox" id="cb2" checked="checked"/>
-                    <label for="cb2"><img src="img/user1.jpg" /></label>
+                    <input type="checkbox" id="cb2" checked="checked" />
+                    <label for="cb2"><img src="img/user2.jpg" /></label>
                 </li>
                 <li>
-                    <input type="checkbox" id="cb3" checked="checked"/>
-                    <label for="cb3"><img src="img/user2.jpg" /></label>
+                    <input type="checkbox" id="cb3" checked="checked" />
+                    <label for="cb3"><img src="img/user3.jpg" /></label>
                 </li>
                 <li>
-                    <input type="checkbox" id="cb4" checked="checked"/>
-                    <label for="cb4"><img src="img/user3.jpg" /></label>
+                    <input type="checkbox" id="cb4" checked="checked" />
+                    <label for="cb4"><img src="img/user4.jpg" /></label>
                 </li>
                 <li>
-                    <input type="checkbox" id="cb5" checked="checked"/>
-                    <label for="cb5"><img src="img/user4.jpg" /></label>
-                </li>
-                <li>
-                    <input type="checkbox" id="cb6" checked="checked"/>
-                    <label for="cb6"><img src="img/user5.jpg" /></label>
-                </li>
-
+                    <input type="checkbox" id="cb5" checked="checked" />
+                    <label for="cb5"><img src="img/user5.jpg" /></label>
+                </li> -->
             </ul>
         </div>
         <div class="clearfix"></div>
@@ -104,33 +103,53 @@
 
         $("#ranomizeButton").click(function() {
 
-            if (readyToRemoveIndex != -1) {
-                //var removeID = "user" + readyToRemoveIndex + "Img";
-                //console.log(removeID);
-                //var element = document.getElementById(removeID);
-                //readyToRemoveIndex.parentElement.removeChild(readyToRemoveIndex);
-                document.getElementById(readyToRemoveIndex).parentElement.removeChild(document.getElementById(readyToRemoveIndex));
+                if (readyToRemoveIndex != -1) {
+                    //var removeID = "user" + readyToRemoveIndex + "Img";
+                    //console.log(removeID);
+                    //var element = document.getElementById(removeID);
+                    //readyToRemoveIndex.parentElement.removeChild(readyToRemoveIndex);
+                    document.getElementById(readyToRemoveIndex).parentElement.removeChild(document.getElementById(readyToRemoveIndex));
 
 
+                } else {
+
+                }
+                machine2.destroy();
+                machine2 = $("#machine2").slotMachine({
+                    active: 1,
+                    delay: 1000,
+                    direction: 'down'
+                });
+
+                machine2.shuffle(5, onComplete);
+
+                // setTimeout(function(){
+                //  machine2.shuffle(5, onComplete);
+                // }, 500);
+
+                // setTimeout(function(){
+                //  machine3.shuffle(5, onComplete);
+                // }, 1000);
+
+            })
+        //dynamic create member
+        var list = $('#theList'),
+            limit = 5,
+            current = 1;
+        var end = setInterval(function() {
+            if (current == limit) {
+                current = 5;
+                clearInterval(end);
             }
-            machine2.destroy();
-            machine2 = $("#machine2").slotMachine({
-                active: 1,
-                delay: 1000,
-                direction: 'down'
-            });
-
-            machine2.shuffle(5, onComplete);
-
-            // setTimeout(function(){
-            //  machine2.shuffle(5, onComplete);
-            // }, 500);
-
-            // setTimeout(function(){
-            //  machine3.shuffle(5, onComplete);
-            // }, 1000);
-
-        })
+            list.append('<li><input type="checkbox" id="cb' + current + '" checked="checked" /><label for="cb' + current + '"><img src="img/user' + current + '.jpg"/></label></li>');
+            var newList = $('#theList li:last-child');
+            newList.fadeIn();
+            var colorEnd = setInterval(function() {
+                newList.css('color', 'black');
+                clearInterval(colorEnd);
+            }, 350);
+            current = current + 1;
+        }, 300);
     });
     </script>
     <footer>
