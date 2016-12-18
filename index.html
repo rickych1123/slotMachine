@@ -14,13 +14,46 @@
 </head>
 
 <body>
+    <div id="watch" style="padding-top:50px;">
+        <div class="content">
+            <h1>Select the Candidate</h1>
+            <ul>
+                <li>
+                    <input type="checkbox" id="cb1" checked="checked" />
+                    <label for="cb1"><img src="img/user0.jpg" /></label>
+                </li>
+                <li>
+                    <input type="checkbox" id="cb2" checked="checked"/>
+                    <label for="cb2"><img src="img/user1.jpg" /></label>
+                </li>
+                <li>
+                    <input type="checkbox" id="cb3" checked="checked"/>
+                    <label for="cb3"><img src="img/user2.jpg" /></label>
+                </li>
+                <li>
+                    <input type="checkbox" id="cb4" checked="checked"/>
+                    <label for="cb4"><img src="img/user3.jpg" /></label>
+                </li>
+                <li>
+                    <input type="checkbox" id="cb5" checked="checked"/>
+                    <label for="cb5"><img src="img/user4.jpg" /></label>
+                </li>
+                <li>
+                    <input type="checkbox" id="cb6" checked="checked"/>
+                    <label for="cb6"><img src="img/user5.jpg" /></label>
+                </li>
+
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div>
     <div id="randomize">
         <div class="content container" style="text-align: center;max-width: 900px;">
             <h1>2017 Happy New Year!</h1>
             <div class="row">
-                <div class="col-xs-4">
+                <div class="col-md-4">
                 </div>
-                <div class="col-xs-4 col-pic">
+                <div class="col-md-4 col-pic">
                     <div>
                         <div id="machine2" class="randomizeMachine">
                             <div id="user0Img"><img src="img/user0.jpg" /></div>
@@ -29,7 +62,6 @@
                             <div id="user3Img"><img src="img/user3.jpg" /></div>
                             <div id="user4Img"><img src="img/user4.jpg" /></div>
                             <div id="user5Img"><img src="img/user5.jpg" /></div>
-                            <!-- <div><img src="img/slot6.png" /></div> -->
                         </div>
                     </div>
                 </div>
@@ -62,11 +94,11 @@
             var machine = document.getElementById(this.element[0].id);
             //console.log(this.element[0].id);
             console.log(this.active);
-            readyToRemoveIndex = this.active;
+            //readyToRemoveIndex = this.active;
             // if (this.active < this.element[0].childNodes[1].childNodes.length)
             //     readyToRemoveIndex = "user" + this.active + "Img";
             // else
-                readyToRemoveIndex = this.element[0].childNodes[1].childNodes[this.active].id;
+            readyToRemoveIndex = this.element[0].childNodes[1].childNodes[this.active].id;
             console.log(readyToRemoveIndex);
         }
 
@@ -91,11 +123,11 @@
             machine2.shuffle(5, onComplete);
 
             // setTimeout(function(){
-            // 	machine2.shuffle(5, onComplete);
+            //  machine2.shuffle(5, onComplete);
             // }, 500);
 
             // setTimeout(function(){
-            // 	machine3.shuffle(5, onComplete);
+            //  machine3.shuffle(5, onComplete);
             // }, 1000);
 
         })
