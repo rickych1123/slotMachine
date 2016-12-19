@@ -110,8 +110,10 @@
                         direction: 'down'
                     });
                 }
-                if (userNum >= 0)
+                if (userNum >= 3)
                     machine2.shuffle(userNum, onComplete);
+                else
+                    machine2.shuffle(3, onComplete);
             })
             //dynamic create member
         var list = $('#theList'),

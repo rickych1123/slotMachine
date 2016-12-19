@@ -211,9 +211,9 @@ header a {
  * Watch
  */
 #watch {
-    border-top: 20px dotted rgb(72, 158, 48);
+    border-top: 20px dotted rgb(204, 204, 0);
     border-bottom: 10px solid #B8312F;
-    background-color: #46D265;
+    background-color: #FFFF99;
 }
 
 #watch h1 {
@@ -224,7 +224,7 @@ header a {
 
 #watch .content:nth-child(1) {
     text-align: center;
-    background: url('../img/watch.png') no-repeat 50% 80px;
+    /*background: url('../img/watch.png') no-repeat 50% 80px;*/
     height: 550px;
 }
 
@@ -474,7 +474,7 @@ label img {
 
 :checked + label:before {
   content: "✓";
-  background-color: grey;
+  background-color: #00CC00;
   transform: scale(1);
 }
 
