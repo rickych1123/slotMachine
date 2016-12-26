@@ -49,6 +49,9 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <ul id="finished"></ul>
+            </div>
         </div>
     </div>
     <script>
@@ -67,9 +70,11 @@
         function onComplete(active) {
             var machine = document.getElementById(this.element[0].id);
             console.log(this.active);
-            
+
             readyToRemoveIndex = this.element[0].childNodes[1].childNodes[this.active].id;
             console.log(readyToRemoveIndex);
+            var index = readyToRemoveIndex.slice(0, -3);
+            $('#finished').append('<li><img src="img/' + index + '.jpg" /></li>')
         }
 
         $("#ranomizeButton").click(function() {
