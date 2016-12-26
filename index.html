@@ -20,7 +20,7 @@
             <ul id="theList">
                 <li>
                     <input type="checkbox" id="cb0" checked="checked" />
-                    <label for="cb0"><img src="img/attend0.jpg" /></label>
+                    <label for="cb0"><img src="img/Attend0.jpg" /></label>
                 </li>
             </ul>
         </div>
@@ -93,7 +93,7 @@
                             console.log($(this)[0].checked);
                             var userID = $(this)[0].id.split("cb")[1];
                             if ($(this)[0].checked) {
-                                $('#machine2').append('<div id="attend' + userID + 'Img"><img src="img/attend' + userID + '.jpg" /></div>')
+                                $('#machine2').append('<div id="Attend' + userID + 'Img"><img src="img/Attend' + userID + '.jpg" /></div>')
                                 console.log('add' + userID);
                                 userNum++;
                                 console.log('userNum: ' + userNum);
@@ -132,7 +132,7 @@
                 current = 33;
                 clearInterval(end);
             }
-            list.append('<li><input type="checkbox" id="cb' + current + '" checked="checked" /><label for="cb' + current + '"><img src="img/attend' + current + '.jpg"/></label></li>');
+            list.append('<li><input type="checkbox" id="cb' + current + '" checked="checked" /><label for="cb' + current + '"><img src="img/Attend' + current + '.jpg"/></label></li>');
             // var newList = $('#theList li:last-child');
             // newList.fadeIn('fast');
             // var colorEnd = setInterval(function() {
