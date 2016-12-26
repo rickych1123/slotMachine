@@ -74,10 +74,13 @@
             readyToRemoveIndex = this.element[0].childNodes[1].childNodes[this.active].id;
             console.log(readyToRemoveIndex);
             var index = readyToRemoveIndex.slice(0, -3);
-            $('#finished').append('<li><img src="img/' + index + '.jpg" /></li>')
+            if (index != "")
+                $('#finished').append('<li><img src="img/' + index + '.jpg" /></li>')
         }
 
         $("#ranomizeButton").click(function() {
+                if(machine2.running)
+                    return;
 
                 if (readyToRemoveIndex != -1) {
                     document.getElementById(readyToRemoveIndex).parentElement.removeChild(document.getElementById(readyToRemoveIndex));
