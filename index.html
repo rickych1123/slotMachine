@@ -97,7 +97,7 @@
                 machine2.destroy();
                 machine2 = $("#machine2").slotMachine({
                     active: 1,
-                    delay: 1000,
+                    delay: 200,
                     direction: 'down'
                 });
 
@@ -106,7 +106,7 @@
                     machine2.destroy();
                     machine2 = $("#machine2").slotMachine({
                         active: 1,
-                        delay: 1000,
+                        delay: 200,
                         direction: 'down'
                     });
                 }
@@ -125,14 +125,14 @@
                 clearInterval(end);
             }
             list.append('<li><input type="checkbox" id="cb' + current + '" checked="checked" /><label for="cb' + current + '"><img src="img/user' + current + '.jpg"/></label></li>');
-            var newList = $('#theList li:last-child');
-            newList.fadeIn();
-            var colorEnd = setInterval(function() {
-                newList.css('color', 'black');
-                clearInterval(colorEnd);
-            }, 350);
+            // var newList = $('#theList li:last-child');
+            // newList.fadeIn('fast');
+            // var colorEnd = setInterval(function() {
+            //     newList.css('color', 'black');
+            //     clearInterval(colorEnd);
+            // }, 350);
             current = current + 1;
-        }, 300);
+        }, 10);
     });
     </script>
     <footer>
