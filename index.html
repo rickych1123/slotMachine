@@ -20,7 +20,7 @@
             <ul id="theList">
                 <li>
                     <input type="checkbox" id="cb0" checked="checked" />
-                    <label for="cb0"><img src="img/user0.jpg" /></label>
+                    <label for="cb0"><img src="img/attend0.jpg" /></label>
                 </li>
             </ul>
         </div>
@@ -61,7 +61,7 @@
         var userNum = -1;
         var machine2 = $("#machine2").slotMachine({
             active: 1,
-            delay: 200,
+            delay: 100,
             direction: 'down'
         });
 
@@ -91,9 +91,9 @@
                         $(this).find('input').each(function() {
                             console.log($(this)[0].id);
                             console.log($(this)[0].checked);
-                            var userID = $(this)[0].id[2];
+                            var userID = $(this)[0].id.split("cb")[1];
                             if ($(this)[0].checked) {
-                                $('#machine2').append('<div id="user' + userID + 'Img"><img src="img/user' + userID + '.jpg" /></div>')
+                                $('#machine2').append('<div id="attend' + userID + 'Img"><img src="img/attend' + userID + '.jpg" /></div>')
                                 console.log('add' + userID);
                                 userNum++;
                                 console.log('userNum: ' + userNum);
@@ -105,7 +105,7 @@
                 machine2.destroy();
                 machine2 = $("#machine2").slotMachine({
                     active: 1,
-                    delay: 200,
+                    delay: 100,
                     direction: 'down'
                 });
 
@@ -114,7 +114,7 @@
                     machine2.destroy();
                     machine2 = $("#machine2").slotMachine({
                         active: 1,
-                        delay: 200,
+                        delay: 100,
                         direction: 'down'
                     });
                 }
@@ -125,14 +125,14 @@
             })
             //dynamic create member
         var list = $('#theList'),
-            limit = 5,
+            limit = 33,
             current = 1;
         var end = setInterval(function() {
             if (current == limit) {
-                current = 5;
+                current = 33;
                 clearInterval(end);
             }
-            list.append('<li><input type="checkbox" id="cb' + current + '" checked="checked" /><label for="cb' + current + '"><img src="img/user' + current + '.jpg"/></label></li>');
+            list.append('<li><input type="checkbox" id="cb' + current + '" checked="checked" /><label for="cb' + current + '"><img src="img/attend' + current + '.jpg"/></label></li>');
             // var newList = $('#theList li:last-child');
             // newList.fadeIn('fast');
             // var colorEnd = setInterval(function() {

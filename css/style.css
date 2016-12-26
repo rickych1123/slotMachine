@@ -161,7 +161,7 @@ header a {
  * SlotMachine
  */
 #randomize {
-    height: 600px;
+    height: 900px;
     border-bottom: 10px solid #A48E4E;
     background-color: #EB6B56;
     border-top: 20px dotted #B8312F;
@@ -217,7 +217,7 @@ header a {
 #watch .content:nth-child(1) {
     text-align: center;
     /*background: url('../img/watch.png') no-repeat 50% 80px;*/
-    height: 550px;
+    height: 775px;
 }
 
 #watch .content > div {
