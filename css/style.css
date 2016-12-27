@@ -38,6 +38,7 @@ h1{
 	width: 100%;
 	font-size: 40px;
 	margin-bottom: 20px;
+  font-family: monospace;
 }
 h2{
 	color: #000000;
@@ -117,70 +118,40 @@ header a {
 }
 
 /*
- * Airlines
- */
-#plane {
-	width: 100%;
-	position: relative;
-	padding: 70px 0px;
-    border-bottom: 10px solid #B8312F;
-    border-top: 20px dotted #66D4FF;
-    height: 400px;
-    background-color: rgb(0, 175, 225);
-    background-image: url('../img/plane.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#plane .content{
-    float: left;
-    font-size: 50px;
-    font-weight: 300;
-    line-height: 42px;
-    margin-top: 30px;
-    text-align: center;
-    width: 100%;
-}
-
-#plane .content, footer .content{
-	font-family: 'Pathway Gothic One';
-    font-size: 70px;
-    font-weight: 300;
-    line-height: 80px;
-}
-
-#planeMachine {
-	width:520px;
-	height: 67px;
-	overflow: hidden;
-	display: inline-block;
-	text-align: left;
-}
-
-/*
  * SlotMachine
  */
 #randomize {
     height: 900px;
-    border-bottom: 10px solid #A48E4E;
-    background-color: #EB6B56;
-    border-top: 20px dotted #B8312F;
+    border-bottom: 10px;
+    background-color: rgba(64, 91, 85, 0.9);
+    border-top: 20px;
 }
-/*#randomize .content{
-    text-align: center;
-    height: 550px;
-}*/
+
+#randomize h1 {
+    margin: 0px;
+    padding: 25px 0px;
+    margin-bottom: 10px;
+    font-size: 35px;
+    text-decoration: underline;
+    color: #FCFAF2
+}
+
 #randomize .row > div.col-pic {
 }
 
 #randomize .row > div.col-pic > div {
     padding-top: 40px;
-    padding-left: 35px;
+    padding-left: 38px;
     width: 175px;
     height: 175px;
-    background-color: #fff;
+    background-color: #FCFAF2;
     border-radius: 80%;
     margin: auto;
+}
+
+.randomizeMachine img{
+    width: 100%;
+    height: 100%;
 }
 
 .randomizeMachine {
@@ -200,18 +171,45 @@ header a {
 }
 
 /*
+ * Top
+ */
+#top {
+    background-color: #434343;
+    text-align: center;
+}
+
+#top h1 {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 10px;
+    color: #FCFAF2;
+}
+
+#top p {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+    color: #FCFAF2;
+    font-family: monospace;
+    font-size: 22px;
+}
+
+
+/*
  * Watch
  */
 #watch {
-    border-top: 20px dotted rgb(204, 204, 0);
-    border-bottom: 10px solid #B8312F;
-    background-color: #FFFF99;
+    border-top: 20px;
+    border-bottom: 20px;
+    background-color: #FCFAF2;
 }
 
 #watch h1 {
     margin: 0px;
-    padding: 0px;
+    padding: 0px 0px 10px;
     margin-bottom: 10px;
+    font-size: 35px;
+    text-decoration: underline;
 }
 
 #watch .content:nth-child(1) {
@@ -251,104 +249,19 @@ header a {
     background-color: rgb(72, 158, 48);
 }
 
-/*
- * Triky
- */
-#triky {
-    text-align: center;
-    background: url('../img/triky.jpg') no-repeat right 40px;
-    background-color: #0F99CA;
-    height: 450px;
-	border-bottom: 10px solid rgb(180, 75, 119);
-	border-top: 20px dotted #195AC8;
-}
 
-#triky .row > div {
-    background-color: #fff;
-    width: 225px;
-    height: 225px;
-    border-radius: 50%;
-    padding-top: 40px;
-    padding-left: 35px;
-    left: -35px;
-}
-
-#triky1 {
-    width: 150px;
-    height: 150px;
-}
-
-.btn-group-triky {
-    margin-top: 60px;
-}
-
-/*
- * Casino
- */
-#casino {
-    border-top: 20px dotted rgb(180, 75, 119);
-    border-bottom: 10px solid #A48E4E;
-    background-color: rgb(240, 150, 150);
-}
-
-#casino h1 {
-    margin: 0px;
-}
-
-#casino .content:nth-child(1) {
-    text-align: center;
-    background: url('../img/machine.png') no-repeat 50% 80px;
-    height: 580px;
-}
-
-#casino .content > div {
-    clear:both;
-    padding-top: 200px;
-    width: 300px;
-    margin: 0 auto;
-}
-
-.machineContainer{
-	background-color: #000;
-	padding: 5px 1px 5px 1px;
-	overflow: hidden;
-	height: 135px;
-}
-
-.slotMachine{
-	width: 32.333333%;
-	border: 5px solid #000;
-	height: 100px;
-	padding: 0px;
-	overflow: hidden;
-	display: inline-block;
-	text-align: center;
-	background-color: #ffffff;
-}
-
-.btn-group-casino {
-    margin-top: 150px;
-    margin-left: -32px;
-}
-
-.btn-group-casino .btn {
-    border: none;
-    background-color: rgb(209, 79, 119);
-}
-.btn-group-casino .btn:hover, .btn-group-casino .btn:focus {
-    background-color: rgb(180, 75, 119);
-}
 
 /*
  * Footer
  */
 footer{
 	width:100%;
-	background-color: #6C5726;
-	border-top: 20px dotted #A48E4E;
-    height: 180px;
-    padding-top: 40px;
-    text-align: center;
+	background-color: #434343;
+	border-top: 20px;
+    height: 45px;
+    padding-top: 15px;
+    padding-right: 15px;
+    text-align: right;
     color: #DCD293;
 }
 
@@ -359,20 +272,6 @@ footer{
 	display: inline-block;
 	text-align: left;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .machineResult{
 	color:#fff;
@@ -389,30 +288,6 @@ footer{
 	background-repeat: no-repeat;
 }
 
-.slot1 {
-	background-image: url("../img/slot1.png");
-}
-
-.slot2 {
-	background-image: url("../img/slot2.png");
-}
-
-.slot3 {
-	background-image: url("../img/slot3.png");
-}
-
-.slot4 {
-	background-image: url("../img/slot4.png");
-}
-
-.slot5 {
-	background-image: url("../img/slot5.png");
-}
-
-.slot6 {
-	background-image: url("../img/slot6.png");
-}
-
 /*check box img */
 ul {
   list-style-type: none;
@@ -427,7 +302,7 @@ input[type="checkbox"][id^="cb"] {
 }
 
 label {
-  border: 1px solid #fff;
+  border: 1px solid #FCFAF2;
   padding: 10px;
   display: block;
   position: relative;
@@ -461,12 +336,12 @@ label img {
 }
 
 :checked + label {
-  border-color: #ddd;
+  border-color: rgba(64, 91, 85, 0.3);
 }
 
 :checked + label:before {
   content: "✓";
-  background-color: #00CC00;
+  background-color: rgba(64, 91, 85, 0.9);
   transform: scale(1);
 }
 
